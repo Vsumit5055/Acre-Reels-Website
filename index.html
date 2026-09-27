@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acre Reels - Find your dream property in Vasai-Virar and nearby areas.">
+  <title>Acre Reels | Find Your Dream Property</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#home"><span>A</span> Acre Reels</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#about">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-whatsapp" href="https://wa.me/917709415350" target="_blank" rel="noopener">WhatsApp</a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">ACRE REELS • REAL ESTATE</p>
+        <h1>Find a place<br><em>you'll love.</em></h1>
+        <p class="hero-copy">Discover verified homes, apartments and investment properties across Vasai–Virar and nearby locations.</p>
+        <a href="#properties" class="btn btn-primary">Explore Properties <span>→</span></a>
+      </div>
+      <div class="search-box">
+        <div class="search-field">
+          <label for="locationFilter">Location</label>
+          <select id="locationFilter">
+            <option value="all">All locations</option>
+            <option value="Vasai">Vasai</option>
+            <option value="Virar">Virar</option>
+            <option value="Nalasopara">Nalasopara</option>
+            <option value="Naigaon">Naigaon</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="typeFilter">Property type</label>
+          <select id="typeFilter">
+            <option value="all">All types</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Villa">Villa</option>
+            <option value="Plot">Plot</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="budgetFilter">Budget</label>
+          <select id="budgetFilter">
+            <option value="all">Any budget</option>
+            <option value="50">Under ₹50 Lakh</option>
+            <option value="75">Under ₹75 Lakh</option>
+            <option value="100">Under ₹1 Crore</option>
+          </select>
+        </div>
+        <button class="search-btn" id="searchBtn">Search</button>
+      </div>
+    </section>
+
+    <section class="section" id="properties">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>Featured Properties</h2>
+        </div>
+        <p id="resultCount" class="result-count"></p>
+      </div>
+      <div id="propertyGrid" class="property-grid"></div>
+      <div id="emptyState" class="empty-state hidden">
+        <div>⌂</div>
+        <h3>No properties found</h3>
+        <p>Try changing your filters to see more properties.</p>
+        <button class="btn btn-outline" id="resetBtn">Reset Filters</button>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats">
+        <div><strong>100+</strong><span>Properties Listed</span></div>
+        <div><strong>4</strong><span>Prime Locations</span></div>
+        <div><strong>24/7</strong><span>Quick Enquiry</span></div>
+        <div><strong>100%</strong><span>Personal Assistance</span></div>
+      </div>
+    </section>
+
+    <section class="why section" id="about">
+      <div class="why-image">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Modern luxury home">
+        <div class="image-card"><strong>Let's find</strong><br>your next address.</div>
+      </div>
+      <div class="why-content">
+        <p class="eyebrow">WHY ACRE REELS</p>
+        <h2>Property hunting,<br><em>made simpler.</em></h2>
+        <p>We bring property options together in one place so you can compare locations, budgets and property types without the usual hassle.</p>
+        <div class="feature-list">
+          <div><span>✓</span><div><strong>Local listings</strong><p>Explore properties around Vasai–Virar and nearby areas.</p></div></div>
+          <div><span>✓</span><div><strong>Easy enquiries</strong><p>Contact our team directly on WhatsApp with one click.</p></div></div>
+          <div><span>✓</span><div><strong>Personal assistance</strong><p>Get help with property details and site-visit enquiries.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div>
+        <p class="eyebrow">READY TO START?</p>
+        <h2>Your next property could be<br><em>one message away.</em></h2>
+      </div>
+      <a class="btn btn-light" href="https://wa.me/917709415350?text=Hi%20Acre%20Reels%2C%20I%27m%20looking%20for%20a%20property." target="_blank" rel="noopener">Chat on WhatsApp →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a class="logo footer-logo" href="#home"><span>A</span> Acre Reels</a>
+      <p>Helping you find a place you'll love.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a><a href="#properties">Properties</a><a href="#about">Why Us</a><a href="#contact">Contact</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Acre Reels. All rights reserved.</p>
+  </footer>
+
+  <div class="modal hidden" id="propertyModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <img id="modalImage" src="" alt="">
+      <div class="modal-body">
+        <span id="modalType" class="tag"></span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalLocation" class="modal-location"></p>
+        <div class="modal-details">
+          <div><span>Price</span><strong id="modalPrice"></strong></div>
+          <div><span>Area</span><strong id="modalArea"></strong></div>
+          <div><span>Bedrooms</span><strong id="modalBeds"></strong></div>
+          <div><span>Status</span><strong id="modalStatus"></strong></div>
+        </div>
+        <p id="modalDescription" class="modal-description"></p>
+        <a id="modalWhatsapp" class="btn btn-whatsapp" target="_blank" rel="noopener">Enquire on WhatsApp →</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
